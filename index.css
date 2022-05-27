@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+  font-weight: 500;
+  --darkBlue: #082032;
+  --mediumBlue: #2c394b;
+  --lightBlue: #4b596db3;
+  --white: #f1f1e6;
+  --callToAction: #ff4c29;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--darkBlue);
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding: 2rem;
+  color: var(--white);
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+.row1,
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 100%;
+}
+
+.budget-container,
+.balance-container,
+.expense-container,
+.list-container {
+  min-width: 50%;
+}
+
+.container {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mediumBlue);
+  padding: 1rem;
+}
+
+input:focus {
+  border: 0.2rem solid var(--callToAction);
+}
+
+.title,
+.alert {
+  padding-left: 1rem;
+}
+
+.alert-budget,
+.alert-expense {
+  background-color: rgb(206, 92, 92);
+  color: var(--white);
+  border-radius: 5px;
+  min-height: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+form input {
+  margin: 1rem;
+  padding: 0.8rem;
+  border: 0.2rem transparent;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--lightBlue);
+  color: var(--white);
+}
+
+form button {
+  width: 100px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background-color: var(--callToAction);
+  color: var(--white);
+}
+
+form button:hover {
+  background-color: #e15e44;
+}
+
+.balance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--mediumBlue);
+}
+
+.budget-section {
+  max-width: 33.33%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.red {
+  color: rgb(216, 16, 16);
+}
+
+.bill,
+.credit-card,
+.dolla {
+  font-size: 5rem;
+  color: #bccae0;
+}
+
+.expense-form,
+.item-name,
+.expense-input,
+.expense-submit {
+  border-color: rgb(206, 65, 65);
+}
+
+.expense-submit:hover {
+  background-color: #e15e44;
+}
+
+.expense-submit {
+  min-width: 15rem;
+  cursor: pointer;
+  background-color: var(--callToAction);
+}
+
+.done-btn {
+  display: none;
+  min-width: 15rem;
+  cursor: pointer;
+}
+
+.alert-budget,
+.alert-expense {
+  display: none;
+}
+
+.list-container {
+  display: flex;
+
+  min-width: 50%;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.items-list {
+  display: block;
+  list-style-type: none;
+  min-width: 100%;
+  padding: 0.5rem;
+}
+
+.item {
+  font-size: 1.6rem;
+  list-style-type: none;
+  padding: 0rem 1rem;
+  min-width: 30%;
+  color: var(--white);
+}
+
+.edit,
+.delete {
+  font-size: 2rem;
+  min-width: 3rem;
+  margin: 0.5rem;
+  background-color: transparent;
+  color: var(--callToAction);
+  border: none;
+}
+
+@media screen and (max-width: 500px) {
+  .container,
+  .budget-container,
+  .balance-container,
+  .expense-container,
+  .list-container {
+    width: 100%;
+  }
+}
